@@ -48,14 +48,14 @@ public class CoopHud {
 		g.setColor(Color.GRAY);
 		g.fillRect(1485, 15, healthBarWidth, 64);
 		g.setColor(new Color(75, (int) greenValue, 0));
-		g.fillRect((int) 1485, (int) 15, (int) health * 4, 64);
+		g.fillRect((int) 600, (int) 15, (int) health * 4, 64);
 		g.setColor(scoreColor);
-		g.drawRect(1485, 15, healthBarWidth, 64);
+		g.drawRect(600, 15, healthBarWidth, 64);
 		g.setFont(font);
 		if (state != STATE.Coop) {
-			g.drawString("Score: " + score, 1485, 115);
+			g.drawString("Score: " + score, 600, 115);
 		} else {
-			g.drawString("Vote Count: " + voteCount, 1485, 115);
+			g.drawString("Vote Count: " + voteCount, 600, 115);
 		}
 	}
 
