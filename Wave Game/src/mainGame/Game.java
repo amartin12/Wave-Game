@@ -14,7 +14,7 @@ import java.awt.Toolkit;
 import java.awt.image.BufferStrategy;
 import javax.swing.JFrame;
 
-// comment test
+//comment test
 
 /**
  * Main game class. This class is the driver class and it follows the Holder
