@@ -94,72 +94,79 @@ public class Menu {
 
 	public void render(Graphics g) {
 		if (game.gameState == STATE.Menu) {
-			g.drawImage(image, 0, 0, Game.WIDTH, Game.HEIGHT, null);
+			g.drawImage(image, 0, 0, 1100, 700, null);
 			handler.render(g);
-			Font font = new Font("Amoebic", 1, 100);
-			Font font2 = new Font("Amoebic", 1, 60);
+			Font font = new Font("Amoebic", 1, 50);
+			Font font2 = new Font("Amoebic", 1, 30);
 			Color color1 = new Color(255, 255, 225);
 
 			g.setFont(font);
 			g.setColor(color1);
-			g.drawString("Game Modes", 1140, 100);
+			g.drawString("Game Modes", 630, 200);
 
 			g.setFont(font);
 			g.setColor(color1);
 			//g.drawString("Wave Game", 75, 100);
-			g.drawImage(image2, 75, 25, 600, 100, null);
+			g.drawImage(image2, 100, 50, 400, 75, null);
 
+			// Waves Button
 			g.setColor(color1);
-			g.drawRect(990, 135, 400, 400);
+			g.drawRect(600, 250, 175, 175);
 			g.setFont(font2);
 			g.setColor(color1);
-			g.drawString("Waves", 1110, 215);
+			g.drawString("Waves", 640, 300);
 
+			// Server Defense Button
 			g.setColor(color1);
-			g.drawRect(1440, 135, 400, 400);
+			g.drawRect(825, 250, 175, 175);
 			g.setFont(font2);
 			g.setColor(color1);
-			g.drawString("Server", 1550, 215);
-			g.drawString("Defense", 1530, 280);
+			g.drawString("Server", 860, 300);
+			g.drawString("Defense", 850, 330);
 
+			// Coop Button
 			g.setColor(color1);
-			g.drawRect(990, 585, 400, 400);
+			g.drawRect(600, 475, 175, 175);
 			g.setFont(font2);
 			g.setColor(color1);
-			g.drawString("CO-OP", 1095, 665);
+			g.drawString("CO-OP", 630, 525);
 
+			// Attack Button
 			g.setColor(color1);
-			g.drawRect(1440, 585, 400, 400);
+			g.drawRect(825, 475, 175, 175);
 			g.setFont(font2);
 			g.setColor(color1);
-			g.drawString("Attack", 1550, 665);
+			g.drawString("Attack", 860, 525);
 
+			// Help Button
 			g.setColor(color1);
-			g.drawRect(80, 135, 850, 250);
+			g.drawRect(100, 250, 400, 100);
 			g.setFont(font);
 			g.setColor(color1);
-			g.drawString("Help", 400, 280);
+			g.drawString("Help", 240, 315);
 
+			// Credits Button
 			g.setColor(color1);
-			g.drawRect(80, 435, 850, 250);
+			g.drawRect(100, 400, 400, 100);
 			g.setFont(font);
 			g.setColor(color1);
-			g.drawString("Credits", 340, 600);
+			g.drawString("Credits", 215, 465);
 
+			// Quit Button
 			g.setColor(color1);
-			g.drawRect(80, 735, 850, 250);
+			g.drawRect(100, 550, 400, 100);
 			g.setFont(font);
 			g.setColor(color1);
-			g.drawString("Quit", 400, 900);
+			g.drawString("Quit", 240, 620);
 
 		} else if (game.gameState == STATE.Help) {// if the user clicks on "help"
 			Font font = new Font("impact", 1, 50);
-			Font font2 = new Font("impact", 70, 30);
-			Font font3 = new Font("Stencil", 1,100);
+			Font font2 = new Font("impact", 1, 20);
+			Font font3 = new Font("Stencil", 1, 60);
 			
 			g.setFont(font3);
 			g.setColor(Color.red);
-			g.drawString("Help Screen", 650, 100);
+			g.drawString("Help Screen", 375, 100);
 
 			g.setFont(font2);
 			g.setColor(Color.red);

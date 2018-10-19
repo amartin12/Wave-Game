@@ -53,9 +53,9 @@ public class MouseListener extends MouseAdapter {
 		this.upgradeScreen = upgradeScreen;
 		this.player = player;
 		this.upgrades = upgrades;
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		width = (double) screenSize.getWidth();
-		height = (double) screenSize.getHeight();
+		// Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		width = 1100;
+		height = 700;
 	}
 
 	// added second constructor in case of multiplayer
@@ -78,9 +78,9 @@ public class MouseListener extends MouseAdapter {
 		this.player2 = player2;
 		this.server = server;
 		this.upgrades = upgrades;
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		width = (double) screenSize.getWidth();
-		height = (double) screenSize.getHeight();
+		// Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		width = 1100;
+		height = 700;
 		bulletX = 0;
 		bulletY = 0;
 		bulletSpeed = -10;
@@ -222,15 +222,15 @@ public class MouseListener extends MouseAdapter {
 
 		else if (game.gameState == STATE.Menu) {
 			// Waves Button
-			if (mouseOver(mx, my, 990, 135, 400, 400)) {
+			if (mouseOver(mx, my, 600, 250, 175, 175)) {
 				handler.object.clear();
 				game.gameState = STATE.Game;
 				handler.addObject(player);
 				hud.setWave(true);
 
 			}
-			// multiplayer coop button
-			else if (mouseOver(mx, my, 990, 535, 400, 400)) {
+			// Coop Button
+			else if (mouseOver(mx, my, 600, 475, 175, 175)) {
 				handler.object.clear();
 				game.gameState = STATE.Coop;
 				handler.addObject(player);
@@ -238,14 +238,16 @@ public class MouseListener extends MouseAdapter {
 				hud2.setCoop(true);
 			}
 
-			else if (mouseOver(mx, my, 1440, 585, 400, 400)) {
+			// Attack Button
+			else if (mouseOver(mx, my, 825, 475, 175, 175)) {
 				handler.object.clear();
 				game.gameState = STATE.Attack;
 				handler.addObject(player);
 				attackHUD.setAttack(true);
 			}
 			
-			else if (mouseOver(mx, my, 1440, 135, 400, 400)){
+			// Server Defense Button
+			else if (mouseOver(mx, my, 825, 250, 175, 175)){
 				handler.object.clear();
 				game.gameState = STATE.Defense;
 				handler.addObject(player2);
@@ -254,12 +256,12 @@ public class MouseListener extends MouseAdapter {
 			}
 
 			// Help Button
-			else if (mouseOver(mx, my, 80, 135, 850, 250)) {
+			else if (mouseOver(mx, my, 100, 250, 400, 100)) {
 				game.gameState = STATE.Help;
 			}
 
 			// Credits
-			else if (mouseOver(mx, my, 80, 435, 850, 250)) {
+			else if (mouseOver(mx, my, 100, 400, 400, 100)) {
 				JOptionPane.showMessageDialog(game,
 						"Game made by Brandon Loehle in 2016." 
 								+ "\n\nContributions of debugging and enhancements made by Kyle Horton, Rob Laudadio, Ryan Hanlon, "
@@ -270,7 +272,7 @@ public class MouseListener extends MouseAdapter {
 			}
 
 			// Quit Button
-			else if (mouseOver(mx, my, 80, 735, 850, 250)) {
+			else if (mouseOver(mx, my, 100, 550, 400, 100)) {
 				System.exit(1);
 			}
 		}

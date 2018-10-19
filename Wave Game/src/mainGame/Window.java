@@ -15,15 +15,16 @@ public class Window extends Canvas{
 	private static final long serialVersionUID = 1L;
 	
 	public Window(int width, int height, String title, Game game){
-		//uses the java api to get the users screen width and height to build the window 
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		width = (int) screenSize.getWidth();
-		height = (int) screenSize.getHeight();
+		// Sets static window size regardless of screen size
+		width = 1100;
+		height = 700;
+		
 		JFrame frame = new JFrame(title);
-		frame.setPreferredSize(new Dimension(width, height));
-		frame.setMaximumSize(new Dimension(width, height));
-		frame.setMinimumSize(new Dimension(width, height));
+		frame.setPreferredSize(new Dimension(1100, 700));
+		frame.setMaximumSize(new Dimension(1100, 700));
+		frame.setMinimumSize(new Dimension(1100, 700));
 		//packs the frame based on the users monitor
+		
 		frame.pack();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(true);
@@ -31,7 +32,7 @@ public class Window extends Canvas{
 		frame.add(game);
 		frame.setVisible(true);
 		game.start();
-		
+	
 	}
 
 

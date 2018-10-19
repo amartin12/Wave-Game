@@ -23,7 +23,7 @@ public class AttackHUD {
 	private String boss = "";
 	private boolean isBoss = false;
 	private boolean isAttack = false;
-	private int healthBarWidth = 600;
+	private int healthBarWidth = 400;
 	private int healthBarModifier = 2;
 	private int abilityUses;
 	private Color scoreColor = Color.white;
@@ -38,7 +38,7 @@ public class AttackHUD {
 
 	public void render(Graphics g) {
 		Font font = new Font("Stencil", 1, 30);
-		Font font2 = new Font("Stencil", 1, 100);
+		Font font2 = new Font("Stencil", 1, 50);
 
 		g.setColor(Color.GRAY);
 		g.fillRect(15, 15, healthBarWidth, 64);
@@ -54,11 +54,11 @@ public class AttackHUD {
 		
 		// switches display based on if player has ammo or needs to reload
 		if (ammo > 0){
-		g.drawString("Ammo: " + ammo + "/" + mag , 1600, 60);
+		g.drawString("Ammo: " + ammo + "/" + mag , 500, 60);
 		} if (ammo == 0 && mag > 0) {
-			g.drawString("PRESS 'ENTER' OR 'R' TO RELOAD!" , 1300, 60);
+			g.drawString("PRESS 'ENTER' OR 'R' TO RELOAD!" , 500, 60);
 		} if (ammo == 0 && mag == 0) {
-			g.drawString("OUT OF AMMO!!!" , 1600, 60);
+			g.drawString("OUT OF AMMO!!!" , 500, 60);
 		}
 		
 		// switches display based on if player is on boss or not
