@@ -75,8 +75,15 @@ public class KeyInput extends KeyAdapter {
 			
 			GameObject tempObject = handler.object.get(i);
 					// using only if's allows multiple keys to be triggered at once
-					if (tempObject.getId() == ID.Player) {// find the player object,
+			if(game.gameState == STATE.Defense){
+				if (tempObject.getId() == ID.Player2) {// find the player object,
+					playerObject = tempObject;
+				}
+			}		
+			else if (tempObject.getId() == ID.Player) {// find the player object,
 						playerObject = tempObject;
+					}
+					
 						
 						
 		// key events for player 1
@@ -110,7 +117,7 @@ public class KeyInput extends KeyAdapter {
 			}
 		}
 					
-					}
+					
 		}
 	}
 	
@@ -119,7 +126,7 @@ public class KeyInput extends KeyAdapter {
 	
 	public void keyPressed(KeyEvent e) {
 		// finds what key strokes associate with Player
-		if (game.gameState == STATE.Game ) {
+		if (game.gameState == STATE.Game || game.gameState == STATE.Attack || game.gameState == STATE.Defense) {
 			movement(e);
 			
 		}	
@@ -192,8 +199,8 @@ public class KeyInput extends KeyAdapter {
 
 		for (int i = 0; i < handler.object.size(); i++) {
 			GameObject playerObject = handler.object.get(i);
-			if (game.gameState == STATE.Game) {
-				if (playerObject.getId() == ID.Player) {
+			if (game.gameState == STATE.Game || game.gameState == STATE.Attack || game.gameState == STATE.Defense) {
+				if (playerObject.getId() == ID.Player || playerObject.getId() == ID.Player2) {
 					// key events for player 1
 					if (key == KeyEvent.VK_W || key == KeyEvent.VK_UP)
 						keyDown[0] = false;// playerObject.setVelY(0);
