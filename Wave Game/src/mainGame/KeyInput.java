@@ -127,7 +127,7 @@ public class KeyInput extends KeyAdapter {
 	public void keyPressed(KeyEvent e) {
 		// finds what key strokes associate with Player
 		if (game.gameState == STATE.Game || game.gameState == STATE.Attack || game.gameState == STATE.Defense) {
-			movement(e);
+			movement(e); //
 			
 		}	
 	}
