@@ -94,6 +94,9 @@ public class Spawn1to5 {
 			if (tempCounter < 1) {// called only once, but sets the levelTimer to how long we want this level to run for
 				levelTimer = 2000;// 2000 / 60 method calls a second = 33.33 seconds long
 				tempCounter++;// ensures the method is only called once
+				if(hud.health <= 50) {
+					handler.addPickup(new HealthPowerUp(ID.HealthPowerUp, handler));
+				}
 			}
 			
 			//voteTimer spawns another vote after the timer reaches 0
@@ -108,6 +111,7 @@ public class Spawn1to5 {
 				handler.addObject(
 				new EnemyFBI(r.nextInt(Game.WIDTH), r.nextInt(Game.HEIGHT), -3, -10, ID.EnemyFBI, handler));// add them to the handler, which handles all game objects
 
+				
 				spawnTimer = 100;// reset the spawn timer
 			}
 			if (levelTimer == 0) {// level is over
@@ -132,6 +136,9 @@ public class Spawn1to5 {
 					//handler.addPickup(new PickupVote(ID.Vote, handler));
 					levelTimer = 2000;
 					tempCounter++;
+					if(hud.health <=50) {
+						handler.addPickup(new HealthPowerUp(ID.HealthPowerUp, handler));
+					}
 				}
 				if (game.gameState == STATE.Coop) {
 					if (voteTimer == 0) {
@@ -176,6 +183,9 @@ public class Spawn1to5 {
 				if (tempCounter < 1) {
 					levelTimer = 1500;
 					tempCounter++;
+					if(hud.health <=50) {
+						handler.addPickup(new HealthPowerUp(ID.HealthPowerUp, handler));
+					}
 				}
 				if (game.gameState == STATE.Coop) {
 					if (voteTimer == 0) {
@@ -208,7 +218,6 @@ public class Spawn1to5 {
 				if (tempCounter < 1) {
 					handler.addObject(new EnemyShooter(r.nextInt(Game.WIDTH) - 35, r.nextInt(Game.HEIGHT) - 75, 100, 100,
 							-20, ID.EnemyShooter, this.handler));
-
 					if (hud.health <= 50){
 						handler.addPickup(new PutinHealth(ID.PutinHealth, handler));
 					} else {
@@ -249,6 +258,7 @@ public class Spawn1to5 {
 					tempCounter++;
 					
 					handler.addPickup(new NFLSpeed(ID.NFLSpeed, handler));
+					handler.addPickup(new HealthPowerUp(ID.HealthPowerUp, handler));
 				}
 				if (game.gameState == STATE.Coop) {
 					if (voteTimer == 0) {
