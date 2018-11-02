@@ -39,6 +39,7 @@ public enum ID {
 	Server(),
 	SmartBoss(),
 	AmmoPickup(),
+	HealthPowerUp(),
 	NukePickup();
 	
 }

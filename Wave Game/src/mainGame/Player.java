@@ -227,7 +227,7 @@ public class Player extends GameObject {
 		// if player does, affect player, remove item from array
 		for (int i = 0; i < handler.pickups.size(); i++) {
 			Pickup tempObject = handler.pickups.get(i);
-			if (tempObject.getId() == ID.PutinHealth) {
+			if (tempObject.getId() == ID.HealthPowerUp) {
 				if (getBounds().intersects(tempObject.getBounds())) {
 
 					if (hud.health >= 60) {

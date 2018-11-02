@@ -171,6 +171,7 @@ public class Spawn15to20 {
 					tempCounter++;
 					
 					handler.addPickup(new NFLSpeed(ID.NFLSpeed, handler));
+					handler.addPickup(new HealthPowerUp(ID.HealthPowerUp, handler));
 				}
 				if (game.gameState == STATE.Coop) {
 					if (voteTimer == 0) {
