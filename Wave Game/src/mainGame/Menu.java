@@ -96,181 +96,200 @@ public class Menu {
 		if (game.gameState == STATE.Menu) {
 			g.drawImage(image, 0, 0, 1100, 700, null);
 			handler.render(g);
-			Font font = new Font("Amoebic", 1, 50);
-			Font font2 = new Font("Amoebic", 1, 30);
+			Font font = new Font("Roboto", 1, 35);
+			Font font2 = new Font("Roboto", 1, 30);
 			Color color1 = new Color(255, 255, 225);
+			Color color2 = new Color(0, 255, 255);
+
+			g.setFont(font);
+			g.setColor(color2);
+			g.drawString("GAME MODES", 420, 250);
 
 			g.setFont(font);
 			g.setColor(color1);
-			g.drawString("Game Modes", 630, 200);
-
-			g.setFont(font);
-			g.setColor(color1);
-			//g.drawString("Wave Game", 75, 100);
-			g.drawImage(image2, 100, 50, 400, 75, null);
+			//g.drawString("Wave Game", 120, 100);
+			g.drawImage(image2, 200, 45, 720, 115, null);
 
 			// Waves Button
 			g.setColor(color1);
-			g.drawRect(600, 250, 175, 175);
+			g.drawRect(190, 270, 720, 50);
 			g.setFont(font2);
 			g.setColor(color1);
-			g.drawString("Waves", 640, 300);
-
-			// Server Defense Button
-			g.setColor(color1);
-			g.drawRect(825, 250, 175, 175);
-			g.setFont(font2);
-			g.setColor(color1);
-			g.drawString("Server", 860, 300);
-			g.drawString("Defense", 850, 330);
+			g.drawString("WAVES", 490, 307);
 
 			// Coop Button
 			g.setColor(color1);
-			g.drawRect(600, 475, 175, 175);
+			g.drawRect(190, 330, 720, 50);
 			g.setFont(font2);
 			g.setColor(color1);
-			g.drawString("CO-OP", 630, 525);
+			g.drawString("CO-OP", 490, 365);
+			
+			// Server Defense Button
+			g.setColor(color1);
+			g.drawRect(190, 390, 720, 50); //left margin, top margin, width, height 
+			g.setFont(font2);
+			g.setColor(color1);
+			g.drawString("SERVER DEFENSE", 410, 428);
 
 			// Attack Button
 			g.setColor(color1);
-			g.drawRect(825, 475, 175, 175);
+			g.drawRect(190, 450, 720, 50);
 			g.setFont(font2);
 			g.setColor(color1);
-			g.drawString("Attack", 860, 525);
+			g.drawString("ATTACK", 483, 487);
 
 			// Help Button
 			g.setColor(color1);
-			g.drawRect(100, 250, 400, 100);
+			g.drawRect(190, 550, 220, 80);
 			g.setFont(font);
 			g.setColor(color1);
-			g.drawString("Help", 240, 315);
+			g.drawString("HELP", 254, 605);
 
 			// Credits Button
 			g.setColor(color1);
-			g.drawRect(100, 400, 400, 100);
+			g.drawRect(440, 550, 220, 80);
 			g.setFont(font);
 			g.setColor(color1);
-			g.drawString("Credits", 215, 465);
+			g.drawString("CREDITS", 472, 605);
 
 			// Quit Button
 			g.setColor(color1);
-			g.drawRect(100, 550, 400, 100);
+			g.drawRect(690, 550, 220, 80);
 			g.setFont(font);
 			g.setColor(color1);
-			g.drawString("Quit", 240, 620);
+			g.drawString("QUIT", 752, 605);
 
 		} else if (game.gameState == STATE.Help) {// if the user clicks on "help"
-			Font font = new Font("impact", 1, 50);
-			Font font2 = new Font("impact", 1, 20);
-			Font font3 = new Font("Stencil", 1, 60);
+			Font font = new Font("Roboto", 1, 20);
+			Font font2 = new Font("Roboto", 1, 15);
+			Font font3 = new Font("Roboto", 1, 90);
 			
 			g.setFont(font3);
-			g.setColor(Color.red);
-			g.drawString("Help Screen", 375, 100);
+			g.setColor(Color.magenta);
+			g.drawString("HOW TO PLAY", 260, 120);
 
-			g.setFont(font2);
-			g.setColor(Color.red);
-			g.drawString("Controls:", 40, 200);// + " \n"
+			g.setFont(font);
+			g.setColor(Color.magenta);
+			g.drawString("Instructions:", 40, 190);// + " \n"
+			
+			g.setFont((font));
+			g.setColor(Color.white);
+			g.drawString("Use WASD or the arrow keys to move around and avoid enemies and succeed through the levels.", 160, 190);
 			
 			g.setFont((font2));
-			g.setColor(Color.green);
-			g.drawString("Use WASD Or The Arrow Keys To Move Around And Avoid The Enemies", 160, 200);
-			
+			g.setColor(Color.white);
+			g.drawString("The game consists of four game modes to choose from:" , 40, 245);
+				
 			g.setFont(font2);
-			g.setColor(Color.red);
-			g.drawString("Waves:", 40, 250);
+			g.setColor(Color.cyan);
+			g.drawString("Waves:", 90, 290);
 					
 			g.setFont(font2);
-			g.setColor(Color.green);
-			g.drawString("Avoid The Enemies That Appear.  After Every 10 Levels,  A Boss Level Will Appear.  Beat All The Bosses To Win The Game", 135, 250);		
-			
-			g.setFont(font2);
-			g.setColor(Color.red);
-			g.drawString("CO-OP:", 40, 300);
-			g.setFont(font2);
-			
-			g.setFont(font2);
-			g.setColor(Color.green);
-			g.drawString("Player 1 Moves By Using The WASD Keys, Where Player 2 Moves By Using The Arrow Keys. The First Player To Collect 20 Votes Wins.", 130, 300);
-			
-			
-			g.setFont(font2);
-			g.setColor(Color.red);
-			g.drawString("Server Defense:", 40, 350);
-			g.setFont(font2);
-			
-			g.setFont(font2);
-			g.setColor(Color.green);
-			g.drawString("Defend The Server From Incoming Enemies! Pull Them Away From The Server By Getting Close To Them.", 240, 350);
-			
-			g.setFont(font2);
-			g.setColor(Color.red);
-			g.drawString("Attack:", 40, 400);
-			g.setFont(font2);
-			
-			g.setFont(font2);
-			g.setColor(Color.green);
-			g.drawString("Shoot Back At The Enemies Using The Mouse Click. Reload With The 'R' Or 'Enter' Keys", 130, 400);
-			
-			g.setFont(font2);
-			g.setColor(Color.red);
-			g.drawString("Pick Ups:", 40, 450);
-			
-			g.setFont(font2);
-			g.setColor(Color.green);
-			g.drawString("Description Of What Each Pickup In The Game Does", 160, 450);
-			
-			g.setFont(font2);
-			g.setColor(Color.red);
-			g.drawString("Putin-", 120, 500);
-			
-			g.setFont(font2);
-			g.setColor(Color.green);
-			g.drawString("Replenishes A Portion Of The Players Health", 200, 500);
-			
-			g.setFont(font2);
-			g.setColor(Color.red);
-			g.drawString("Twitter Symbol-", 120, 540);
-			
-			g.setFont(font2);
-			g.setColor(Color.green);
-			g.drawString("Increases The Players Speed For The Rest Of That Level", 315, 540);
-			
-			g.setFont(font2);
-			g.setColor(Color.red);
-			g.drawString("Eminem-", 120, 580);
-			
-			g.setFont(font2);
-			g.setColor(Color.green);
-			g.drawString("Takes Away Portion Of The Players Health ", 230, 580);
-			
-			g.setFont(font2);
-			g.setColor(Color.red);
-			g.drawString("NFL Logo-", 120, 620);
-			
-			g.setFont(font2);
-			g.setColor(Color.green);
-			g.drawString("Decreases The Players Speed For The Rest Of That Level", 235, 620);
-			
-			g.setFont(font2);
-			g.setColor(Color.red);
-			g.drawString("NRA Logo-", 120, 660);
-			
-			g.setFont(font2);
-			g.setColor(Color.green);
-			g.drawString("Give The Player An Extra Life", 240, 660);
-			
-			g.setFont(font2);
-			g.setColor(Color.red);
-			g.drawString("Hillary Emails-", 120, 700);
-			
-			g.setFont(font2);
-			g.setColor(Color.green);
-			g.drawString("Slow down the speed of the Hillary Snakes in the Hillary Boss", 300, 700);
-			
 			g.setColor(Color.white);
-			g.drawRect(850, 800, 200, 64);
-			g.drawString("Back", 918, 842);
+			g.drawString("Avoid the enemies that appear. After every 10 levels,", 153, 290);
+			g.drawString("a boss level will appear. Beat all the bosses to ", 153, 310);
+			g.drawString("win the game.", 153, 330);
+			
+			g.setFont(font2);
+			g.setColor(Color.cyan);
+			g.drawString("CO-OP:", 90, 375);
+			g.setFont(font2);
+			
+			g.setFont(font2);
+			g.setColor(Color.white);
+			g.drawString("Player 1 moves by WASD keys and Player 2 moves by", 153, 375);
+			g.drawString("arrow keys.The first player to collect 20 votes wins.", 153, 395);
+			
+			g.setFont(font2);
+			g.setColor(Color.cyan);
+			g.drawString("Server Defense:", 90, 450);
+			g.setFont(font2);
+			
+			g.setFont(font2);
+			g.setColor(Color.white);
+			g.drawString("Defend the server from incoming enemies. As", 211, 450);
+			g.drawString("you get closer to the enemies, they will be", 211, 470);
+			g.drawString("pulled away from the server.", 211, 490);
+			
+			g.setFont(font2);
+			g.setColor(Color.cyan);
+			g.drawString("Attack:", 90, 525);
+			g.setFont(font2);
+			
+			g.setFont(font2);
+			g.setColor(Color.white);
+			g.drawString("Shoot back at the enemies using the mouse click.", 152, 525);
+			g.drawString("Reload with ‘R’ or ‘Enter’ keys.", 155, 545);
+			
+			g.setFont(font2);
+			g.setColor(Color.white);
+			g.drawString("________________________________________________________________________________________________________________________________________________", 40, 575);
+			
+			g.setFont((font2));
+			g.setColor(Color.white);
+			g.drawString("The game contains the following pick ups:" , 560, 245);
+			
+			g.setFont((font2));
+			g.setColor(Color.magenta);
+			g.drawString("HELP PLAYER" , 560, 290);
+			
+			g.setFont(font2);
+			g.setColor(Color.cyan);
+			g.drawString("Putin:", 610, 320);
+			
+			g.setFont(font2);
+			g.setColor(Color.white);
+			g.drawString("Increases player’s health", 659, 320);
+			
+			g.setFont(font2);
+			g.setColor(Color.cyan);
+			g.drawString("Twitter Symbol:", 610, 350);
+			
+			g.setFont(font2);
+			g.setColor(Color.white);
+			g.drawString("Increases the player’s speed for the rest of that level", 725, 350);
+			
+			g.setFont(font2);
+			g.setColor(Color.cyan);
+			g.drawString("NRA Logo:", 610, 380);
+			
+			g.setFont(font2);
+			g.setColor(Color.white);
+			g.drawString("Gives the player an extra life", 691, 380);
+			
+			g.setFont(font2);
+			g.setColor(Color.cyan);
+			g.drawString("Hillary Emails:", 610, 410);
+			
+			g.setFont(font2);
+			g.setColor(Color.white);
+			g.drawString("Slows down the speed of the Hillary snakes in the", 716, 410);
+			g.drawString("Hillary boss", 715, 430);
+			
+			g.setFont((font2));
+			g.setColor(Color.magenta);
+			g.drawString("HURT PLAYER", 560, 465);
+			
+			g.setFont(font2);
+			g.setColor(Color.cyan);
+			g.drawString("Eminem:", 610, 495);
+			
+			g.setFont(font2);
+			g.setColor(Color.white);
+			g.drawString("Decreases player’s health", 676, 495);
+			
+			g.setFont(font2);
+			g.setColor(Color.cyan);
+			g.drawString("NFL Logo:", 610, 525);
+			
+			g.setFont(font2);
+			g.setColor(Color.white);
+			g.drawString("Decreases the player’s speed for the rest", 688, 525);
+		
+		
+			g.setColor(Color.white);
+			g.drawRect(500, 600, 120, 40);
+			g.drawString("Back", 543, 625);
 		}
 
 	}

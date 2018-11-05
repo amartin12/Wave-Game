@@ -222,7 +222,7 @@ public class MouseListener extends MouseAdapter {
 
 		else if (game.gameState == STATE.Menu) {
 			// Waves Button
-			if (mouseOver(mx, my, 600, 250, 175, 175)) {
+			if (mouseOver(mx, my, 190, 270, 720, 50)) {
 				handler.object.clear();
 				game.gameState = STATE.Game;
 				handler.addObject(player);
@@ -230,7 +230,7 @@ public class MouseListener extends MouseAdapter {
 
 			}
 			// Coop Button
-			else if (mouseOver(mx, my, 600, 475, 175, 175)) {
+			else if (mouseOver(mx, my, 190, 330, 720, 50)) {
 				handler.object.clear();
 				game.gameState = STATE.Coop;
 				handler.addObject(player);
@@ -239,7 +239,7 @@ public class MouseListener extends MouseAdapter {
 			}
 
 			// Attack Button
-			else if (mouseOver(mx, my, 825, 475, 175, 175)) {
+			else if (mouseOver(mx, my, 190, 450, 720, 50)) {
 				handler.object.clear();
 				game.gameState = STATE.Attack;
 				handler.addObject(player);
@@ -247,7 +247,7 @@ public class MouseListener extends MouseAdapter {
 			}
 			
 			// Server Defense Button
-			else if (mouseOver(mx, my, 825, 250, 175, 175)){
+			else if (mouseOver(mx, my, 190, 390, 720, 50)){
 				handler.object.clear();
 				game.gameState = STATE.Defense;
 				handler.addObject(player2);
@@ -256,12 +256,12 @@ public class MouseListener extends MouseAdapter {
 			}
 
 			// Help Button
-			else if (mouseOver(mx, my, 100, 250, 400, 100)) {
+			else if (mouseOver(mx, my, 190, 550, 220, 80)) {
 				game.gameState = STATE.Help;
 			}
 
 			// Credits
-			else if (mouseOver(mx, my, 100, 400, 400, 100)) {
+			else if (mouseOver(mx, my, 440, 550, 220, 80)) {
 				JOptionPane.showMessageDialog(game,
 						"Game made by Brandon Loehle in 2016." 
 								+ "\n\nContributions of debugging and enhancements made by Kyle Horton, Rob Laudadio, Ryan Hanlon, "
@@ -272,14 +272,14 @@ public class MouseListener extends MouseAdapter {
 			}
 
 			// Quit Button
-			else if (mouseOver(mx, my, 100, 550, 400, 100)) {
+			else if (mouseOver(mx, my, 690, 550, 220, 80)) {
 				System.exit(1);
 			}
 		}
 
 		// Back Button for Help screen
 		else if (game.gameState == STATE.Help) {
-			if (mouseOver(mx, my, 850, 800, 200, 64)) {
+			if (mouseOver(mx, my, 500, 600, 120, 40)) {
 				game.gameState = STATE.Menu;
 				return;
 			}
