@@ -11,6 +11,7 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferStrategy;
 import javax.swing.JFrame;
 
@@ -19,8 +20,11 @@ import javax.swing.JFrame;
 /**
  * Main game class. This class is the driver class and it follows the Holder
  * pattern. It houses references to ALL of the components of the game
- *
- * @author Brandon Loehle 5/30/16
+ * @author(main): Brandon Loehle 5/30/16
+ * 
+ * Edited by: Brian Carballo, Kyle DeGennaro, Lauren Heery, 
+Alexandra Martin, and Christina Popik
+ 
  */
 
 public class Game extends Canvas implements Runnable {
@@ -52,9 +56,12 @@ public class Game extends Canvas implements Runnable {
 	private Player player, player2;
 	private Server server;
 	public STATE gameState = STATE.Menu;
+	private PauseMenu pauseMenu; 
 	public static int TEMP_COUNTER;
 	public String temp;
 	Sound sound = new Sound();
+	
+	private boolean isPaused = false;
 
 	/**
 	 * Used to switch between each of the screens shown to the user
@@ -86,6 +93,7 @@ public class Game extends Canvas implements Runnable {
 		upgrades = new Upgrades(this, this.handler, this.hud, this.upgradeScreen, this.player, this.spawner, this.spawner2,
 				this.spawner3, this.spawner4, this.attackHUD, this.attackSpawn);
 		gameOver = new GameOver(this, this.handler, this.hud, this.hud2, this.attackHUD, this.serverHUD);
+		pauseMenu = new PauseMenu();
 		victory = new Victory(this, this.handler, this.hud, this.hud2, this.attackHUD);
 		mouseListener = new MouseListener(this, this.handler, this.hud, this.hud2, this.serverHUD, this.attackHUD, this.spawner, this.spawner2, this.spawner3, this.spawner4, this.attackSpawn,
 				this.upgradeScreen, this.player, this.player2, this.server, this.upgrades);
@@ -157,6 +165,8 @@ public class Game extends Canvas implements Runnable {
 	 * health, appearance, etc).
 	 */
 	public void tick() {
+		
+		if (! isPaused()) {
 		handler.tick();// ALWAYS TICK HANDLER, NO MATTER IF MENU OR GAME SCREEN
 		if (gameState == STATE.Game) {// game is running
 			hud.tick();
@@ -214,7 +224,8 @@ public class Game extends Canvas implements Runnable {
 		} else if (gameState == STATE.Victory){
 			victory.tick();
 		}
-
+		
+		}
 	}
 
 	/**
@@ -330,4 +341,13 @@ public class Game extends Canvas implements Runnable {
 		return gameOver;
 	}
 
+	public void pause() {
+		isPaused = true;
+	}
+	public void unPause() {
+		isPaused = false; 
+	}
+	public  boolean isPaused() {
+		return isPaused;
+	}
 }
