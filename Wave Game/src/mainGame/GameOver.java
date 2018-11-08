@@ -70,10 +70,11 @@ public class GameOver {
 	}
 
 	public void render(Graphics g) {
-		Font font = new Font("Stencil", 1, 100);
-		Font font2 = new Font("Stencil", 1, 60);
+		Font font = new Font("Roboto", 1, 100);
+		Font font2 = new Font("Roboto", 1, 60);
+		Color color1 = new Color(255, 0, 255); // Pink
 		g.setFont(font);
-		g.setColor(Color.red);
+		g.setColor(color1);
 
 		if (attackHUD.getAttack() == true) {
 			
