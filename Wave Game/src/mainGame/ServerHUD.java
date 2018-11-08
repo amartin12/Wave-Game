@@ -12,7 +12,7 @@ import mainGame.Game.STATE;
 public class ServerHUD {
 	public double health = 500;
 	private double healthMax = 100;
-	private double greenValue = 500;
+	private double greenValue = 255;
 	private int score = 00000000000;
 	//private int level = 0;
 	private int timer = 60;
@@ -34,18 +34,20 @@ public class ServerHUD {
 	}
 
 	public void render(Graphics g) {
-		Font font = new Font("Amoebic", 1, 30);
+		Font font = new Font("Roboto", 1, 30);
+		Color color1 = new Color(0, 255, 255); // Blue
+	
 		//g.setColor(Color.GRAY);
-		//g.fillRect(Game.WIDTH/2 , 15, 1200, 100);
+		// g.fillRect(Game.WIDTH/2 , 15, 1200, 100);
 		//g.setColor(new Color(75, 255, 0));
-		g.setColor(new Color(0, 119, 255));
-		g.fillRect((int) 15, (int) 15, (int) health * 4, 64);
+		// g.setColor(new Color(0, 119, 255));
+		g.fillRect((int) 15, (int) 15, (int) health * 4, 30);
 		g.setColor(scoreColor);
 		
-		//g.drawRect(15, 15, healthBarWidth, 64);
+		g.drawRect(15, 15, healthBarWidth, 30);
 		g.setFont(font);
 		g.drawString("Score: " + score, 15, 115);
-		//g.drawString("Extra Lives: " + extraLives, 15, 185);
+		g.drawString("Extra Lives: " + extraLives, 15, 185);
 		
 	}
 

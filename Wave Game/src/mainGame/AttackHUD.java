@@ -23,11 +23,11 @@ public class AttackHUD {
 	private String boss = "";
 	private boolean isBoss = false;
 	private boolean isAttack = false;
-	private int healthBarWidth = 400;
+	private int healthBarWidth = 300;
 	private int healthBarModifier = 2;
 	private int abilityUses;
 	private Color scoreColor = Color.white;
-	private int ammo = 30;
+	private int ammo = 360;
 	private int mag = 360;
 	
 	public void tick() {
@@ -37,36 +37,39 @@ public class AttackHUD {
 	}
 
 	public void render(Graphics g) {
-		Font font = new Font("Stencil", 1, 30);
-		Font font2 = new Font("Stencil", 1, 50);
+		Font font = new Font("Roboto", 1, 20);
+		Font font2 = new Font("Roboto", 1, 40);
+		Color color1 = new Color(0, 255, 255); // Blue
+		Color color2 = new Color(255, 0, 255); // Pink
 
 		g.setColor(Color.GRAY);
-		g.fillRect(15, 15, healthBarWidth, 64);
+		g.fillRect(15, 15, healthBarWidth, 30);
 		g.setColor(new Color(75, (int) greenValue, 0));
-		g.fillRect((int) 15, (int) 15, (int) health *6, 64);
-		g.setColor(scoreColor);
+		g.fillRect((int) 15, (int) 15, (int) health *3, 30);
+		g.setColor(color1);
 		
-		g.drawRect(15, 15, healthBarWidth, 64);
+		g.drawRect(15, 15, healthBarWidth, 30);
 		g.setFont(font);
 		
-		g.drawString("Score: " + score, 15, 115);
-		
+		g.drawString("Score: " + score, 15, 80);
+		g.setColor(color1);
 		
 		// switches display based on if player has ammo or needs to reload
 		if (ammo > 0){
-		g.drawString("Ammo: " + ammo + "/" + mag , 500, 60);
+		g.drawString("Ammo: " + ammo + "/" + mag , 15, 110);
 		} if (ammo == 0 && mag > 0) {
-			g.drawString("PRESS 'ENTER' OR 'R' TO RELOAD!" , 500, 60);
+			g.drawString("PRESS 'R' TO RELOAD!" , 350, 375);
 		} if (ammo == 0 && mag == 0) {
-			g.drawString("OUT OF AMMO!!!" , 500, 60);
+			g.drawString("OUT OF AMMO!!!" , 600, 60);
 		}
 		
 		// switches display based on if player is on boss or not
 		g.setFont(font2);
+		g.setColor(color2);
 		if (isBoss == false) {
-		g.drawString("WAVE " + level, Game.WIDTH/2 - 150, 100);
+		g.drawString("WAVE " + level, 475, 45);
 		} else {
-			g.drawString("" + boss, Game.WIDTH/2 - 200, 100);
+			g.drawString("" + boss, 475, 45);
 		}
 	}
 

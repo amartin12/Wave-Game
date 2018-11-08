@@ -44,18 +44,25 @@ public class CoopHud {
 
 	//renders the coophud
 	public void render(Graphics g) {
-		Font font = new Font("Amoebic", 1, 30);
+		Font font = new Font("Roboto", 1, 20);
+		Font font2 = new Font("Roboto", 1, 40);
+		Color color1 = new Color(0, 255, 255); // Blue
+		Color color2 = new Color(255, 0, 255); // Pink
+		
+		
+		
 		g.setColor(Color.GRAY);
-		g.fillRect(1485, 15, healthBarWidth, 64);
+		g.fillRect(1485, 15, healthBarWidth, 30);
 		g.setColor(new Color(75, (int) greenValue, 0));
-		g.fillRect((int) 600, (int) 15, (int) health * 4, 64);
+		g.fillRect((int) 15, (int) 15, (int) health *3, 30);
 		g.setColor(scoreColor);
-		g.drawRect(600, 15, healthBarWidth, 64);
+		g.drawRect(700, 15, healthBarWidth, 30);
 		g.setFont(font);
+		g.setColor(color1);
 		if (state != STATE.Coop) {
-			g.drawString("Score: " + score, 600, 115);
+			g.drawString("Score: " + score, 300, 115);
 		} else {
-			g.drawString("Vote Count: " + voteCount, 600, 115);
+			g.drawString("Vote Count: " + voteCount, 700, 115);
 		}
 	}
 

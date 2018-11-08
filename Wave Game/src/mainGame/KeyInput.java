@@ -106,6 +106,10 @@ public class KeyInput extends KeyAdapter {
 		if (key == KeyEvent.VK_SPACE) {
 			upgrades.levelSkipAbility();
 		}
+		if (key == KeyEvent.VK_R && attackHUD.getAmmo() == 0) {
+			attackHUD.setAmmo(360);
+		}
+		}
 		if (key == KeyEvent.VK_ENTER) {
 			ability = upgrades.getAbility();
 			if (ability.equals("clearScreen")) {
@@ -119,7 +123,7 @@ public class KeyInput extends KeyAdapter {
 					
 					
 		}
-	}
+	
 	
 		
 		
@@ -224,7 +228,7 @@ public class KeyInput extends KeyAdapter {
 		}
 	}
 	}
-			/*if (game.gameState == STATE.Attack) {
+			/* if (game.gameState == STATE.Attack) {
 				if (playerObject.getId() == ID.Player) {
 					keyReleased(KeyEvent e)
 
