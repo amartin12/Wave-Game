@@ -58,7 +58,8 @@ public class AttackHUD {
 		if (ammo > 0){
 		g.drawString("Ammo: " + ammo + "/" + mag , 15, 110);
 		} if (ammo == 0 && mag > 0) {
-			g.drawString("PRESS 'R' TO RELOAD!" , 350, 375);
+			g.setFont(font2);
+			g.drawString("PRESS 'ENTER' TO RELOAD!" , 325, 375);
 		} if (ammo == 0 && mag == 0) {
 			g.drawString("OUT OF AMMO!!!" , 600, 60);
 		}
