@@ -79,7 +79,7 @@ public class HUD {
 		}
 		
 		g.setFont(font2);
-		g.setColor(color2);
+		g.setColor(Color.black);
 		if (isBoss == false) {
 		g.drawString("Level: " + level, 475, 45);
 		} else {

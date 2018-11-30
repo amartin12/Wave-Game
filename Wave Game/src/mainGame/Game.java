@@ -234,7 +234,8 @@ public class Game extends Canvas implements Runnable {
 		}
 		Graphics g = bs.getDrawGraphics();
 		///////// Draw things bellow this/////////////
-		g.setColor(Color.black);
+		Color color1 = new Color(0, 133, 180);
+		g.setColor(color1);
 		g.fillRect(0, 0, 1100, 700);
 
 		handler.render(g); // ALWAYS RENDER HANDLER, NO MATTER IF MENU OR GAME
