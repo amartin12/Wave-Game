@@ -34,7 +34,7 @@ public class ServerHUD {
 	}
 
 	public void render(Graphics g) {
-		/* Font font = new Font("Roboto", 1, 30);
+		Font font = new Font("Roboto", 1, 30);
 		Color color1 = new Color(0, 255, 255); // Blue
 	
 		g.setColor(Color.GRAY);
@@ -48,7 +48,6 @@ public class ServerHUD {
 		g.setFont(font);
 		g.drawString("Score: " + score, 15, 115);
 		g.drawString("Extra Lives: " + extraLives, 15, 185);
-		*/ 
 	}
 
 	public void updateScoreColor(Color color) {

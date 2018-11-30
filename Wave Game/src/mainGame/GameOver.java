@@ -74,7 +74,7 @@ public class GameOver {
 		Font font2 = new Font("Roboto", 1, 60);
 		Color color1 = new Color(255, 0, 255); // Pink
 		g.setFont(font);
-		g.setColor(color1);
+		g.setColor(Color.cyan);
 
 		if (attackHUD.getAttack() == true) {
 			
