@@ -119,6 +119,7 @@ public class KeyInput extends KeyAdapter {
 				}
 					else {
 						game.pause();
+						
 					}
 				}
 			}

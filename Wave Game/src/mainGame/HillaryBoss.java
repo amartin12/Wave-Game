@@ -26,7 +26,7 @@ public class HillaryBoss extends GameObject {
 	HillaryBoss(double x, double y, double velX, double velY, int size, String side, ID id, Handler handler) {
 		super(x, y, id);
 
-		img = getImage("images/HillaryImage.png");
+		img = getImage("images/HilaryImage.png");
 		img2 = getImage("images/SnakeBody.png");
 		this.timer = 60;
 		this.handler = handler;

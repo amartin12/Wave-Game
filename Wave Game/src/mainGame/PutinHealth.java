@@ -24,7 +24,7 @@ public class PutinHealth extends Pickup{
 		this.handler = handler;
 		velX = Math.random()*10;
 		velY = Math.random()*10;
-		img = getImage("images/PutinImage.png");
+		img = getImage("images/shark.png");
 	}
 
 
