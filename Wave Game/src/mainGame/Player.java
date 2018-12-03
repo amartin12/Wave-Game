@@ -34,7 +34,7 @@ public class Player extends GameObject {
 	private int playerWidth, playerHeight;
 	public static int playerSpeed = 10;
 	private int timer;
-	public int voteCount;
+	public int voteCount;  ///***CHANGE 
 	private boolean shooting;
 	private double bulletX;
 	private double bulletY;
@@ -54,14 +54,14 @@ public class Player extends GameObject {
 		bulletY = 0;
 		shooting = true;
 		timer = 60;
-
+//********* CHANGE HERE FOR NEW CHAR 
 		img = getImage("images/TrumpImage.png");
 		voteCount = 0;
 
 		if (this.id == ID.Player){
 			img = getImage("images/TrumpImage.png");
 		} else if (this.id == ID.Player2){
-			img = getImage("images/HillaryImage2.png");
+			img = getImage("images/HillaryImage.png");
 		}
 
 	}
@@ -175,7 +175,7 @@ public class Player extends GameObject {
 
 		for (int i = 0; i < handler.object.size(); i++) {
 			GameObject tempObject = handler.object.get(i);
-
+					/////**************CHR CHANGE ********
 			if (tempObject.getId() == ID.EnemyBasic || tempObject.getId() == ID.EnemyFast
 					|| tempObject.getId() == ID.EnemySmart || tempObject.getId() == ID.EnemyBossBullet
 					|| tempObject.getId() == ID.EnemySweep || tempObject.getId() == ID.EnemyShooterBullet
@@ -240,12 +240,13 @@ public class Player extends GameObject {
 					// Plays sound effect on different thread
 					// Each sound effect is the same except for which string is
 					// called
+													////*********CHAR CHANGE
 					Thread thread = new Thread(new Sound(), "PutinHealth");
 					thread.start();
 
 				}
 
-			}
+			}                /// *****NEED TO CHANGE FOR CHAR ------
 			if (tempObject.getId() == ID.EminemHealth) {
 				if (getBounds().intersects(tempObject.getBounds())) {
 
@@ -256,11 +257,12 @@ public class Player extends GameObject {
 
 					}
 					handler.removePickup(tempObject);
+															/// *****CHANGE 
 					Thread thread = new Thread(new Sound(), "EminemDecrease");
 					thread.start();
 
 				}
-			}
+			}						/// *****CHANGE 
 			if (tempObject.getId() == ID.TwitterSpeed) {
 				if (getBounds().intersects(tempObject.getBounds())) {
 					playerSpeed = 20;
@@ -268,7 +270,7 @@ public class Player extends GameObject {
 					Thread thread = new Thread(new Sound(), "twitterNoise");
 					thread.start();
 				}
-			}
+			}							/// *****CHANGE 
 			if (tempObject.getId() == ID.NRABonusLife){
 				if (getBounds().intersects(tempObject.getBounds())){
 					if (this.id == ID.Player){
@@ -280,7 +282,7 @@ public class Player extends GameObject {
 						handler.removePickup(tempObject);
 					}
 				}
-			}
+			}						/// *****CHANGE 
 			if (tempObject.getId() == ID.NFLSpeed) {
 				if (getBounds().intersects(tempObject.getBounds())) {
 					playerSpeed = 5;
@@ -290,7 +292,7 @@ public class Player extends GameObject {
 
 				}
 			}
-
+									/// *****CHANGE 
 			if (tempObject.getId() == ID.HillaryEmail) {
 				if (getBounds().intersects(tempObject.getBounds())) {
 					
@@ -300,7 +302,7 @@ public class Player extends GameObject {
 					handler.removePickup(tempObject);
 				}
 			}
-
+			/// *****CHANGE 
 			if (tempObject.getId() == ID.Vote) {
 				if (getBounds().intersects(tempObject.getBounds())) {
 					if (this.id == ID.Player)

@@ -94,7 +94,7 @@ public class Spawn1to5 {
 			if (tempCounter < 1) {// called only once, but sets the levelTimer to how long we want this level to run for
 				levelTimer = 2000;// 2000 / 60 method calls a second = 33.33 seconds long
 				tempCounter++;// ensures the method is only called once
-				if(hud.health <= 50) {
+				if(hud.health <= 2000) {
 					handler.addPickup(new HealthPowerUp(ID.HealthPowerUp, handler));
 				}
 			}
@@ -136,7 +136,7 @@ public class Spawn1to5 {
 					//handler.addPickup(new PickupVote(ID.Vote, handler));
 					levelTimer = 2000;
 					tempCounter++;
-					if(hud.health <=50) {
+					if(hud.health <=5990) {
 						handler.addPickup(new HealthPowerUp(ID.HealthPowerUp, handler));
 					}
 				}
@@ -183,7 +183,7 @@ public class Spawn1to5 {
 				if (tempCounter < 1) {
 					levelTimer = 1500;
 					tempCounter++;
-					if(hud.health <=50) {
+					if(hud.health <=6550) {
 						handler.addPickup(new HealthPowerUp(ID.HealthPowerUp, handler));
 					}
 				}

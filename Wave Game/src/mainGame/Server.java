@@ -35,10 +35,9 @@ public class Server extends GameObject {
 		this.damage = 1;
 		timer = 60;
 		
-		img = getImage("images/server.png");
+		img = getImage("images/Coralreef.png");
 
 	}
-
 
 	@Override
 	public void tick() {
