@@ -247,7 +247,7 @@ public class MouseListener extends MouseAdapter {
 			}
 			
 			// Server Defense Button
-			else if (mouseOver(mx, my, 190, 390, 720, 50)){
+			else if (mouseOver(mx, my, 190, 390, 720, 50)) /*margin-left, margin-top, width, height*/ {
 				handler.object.clear();
 				game.gameState = STATE.Defense;
 				handler.addObject(player2);
