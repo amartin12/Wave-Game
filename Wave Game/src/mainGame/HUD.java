@@ -27,7 +27,7 @@ public class HUD {
 	private boolean regen = false;
 	private boolean isWave = false;
 	private int timer = 60;
-	private int healthBarWidth = 400;
+	private int healthBarWidth = 300;
 	private int healthBarModifier = 2;
 	private int voteCount = 0;
 	private boolean doubleHealth = false;
@@ -56,30 +56,35 @@ public class HUD {
 	}
 
 	public void render(Graphics g) {
-		Font font = new Font("Amoebic", 1, 30);
+		Font font = new Font("Roboto", 1, 20);
+		Font font2 = new Font("Roboto", 1, 40);
+		Color color1 = new Color(0, 255, 255); // Blue
+		Color color2 = new Color(255, 0, 255); // Pink
 
 		g.setColor(Color.GRAY);
-		g.fillRect(15, 15, healthBarWidth, 64);
+		g.fillRect(15, 15, healthBarWidth, 30);
 		g.setColor(new Color(75, (int) greenValue, 0));
-		g.fillRect((int) 15, (int) 15, (int) health * 4, 64);
-		g.setColor(scoreColor);
+		g.fillRect((int) 15, (int) 15, (int) health *3, 30);
+		g.setColor(color1);
 		
-		g.drawRect(15, 15, healthBarWidth, 64);
+		g.drawRect(15, 15, healthBarWidth, 30);
 		g.setFont(font);
 		
+		g.setFont(font);
+		g.setColor(color1);
 		if (state != STATE.Coop) {
-			g.drawString("Score: " + score, 15, 115);
+			g.drawString("Score: " + score, 15, 100);
 		}else {
 			g.drawString("Vote Count: " + voteCount, 15, 115);
 		}
 		
+		g.setFont(font2);
+		g.setColor(Color.black);
 		if (isBoss == false) {
-		g.drawString("Level: " + level, 15, 150);
+		g.drawString("Level: " + level, 475, 45);
 		} else {
 			g.drawString("" + boss, 15, 150);
 		}
-		
-		g.drawString("Extra Lives: " + extraLives, 15, 185);
 	}
 
 	public void setAbility(String ability) {

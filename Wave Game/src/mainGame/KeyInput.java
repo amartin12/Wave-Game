@@ -101,15 +101,11 @@ public class KeyInput extends KeyAdapter {
 		if (key == KeyEvent.VK_SPACE) {
 			upgrades.levelSkipAbility();
 		}
-		if (key == KeyEvent.VK_ENTER) {
-			ability = upgrades.getAbility();
-			if (ability.equals("clearScreen")) {
-				upgrades.clearScreenAbility();
-			} else if (ability.equals("levelSkip")) {
-				upgrades.levelSkipAbility();
-			} else if (ability.equals("freezeTime")) {
-				upgrades.freezeTimeAbility();
-			}
+		
+		if (key == KeyEvent.VK_ENTER && attackHUD.getAmmo() == 0) {
+			attackHUD.setAmmo(360);
+		}
+		
 		}
 		//adding pause menu
 		if (key == KeyEvent.VK_ESCAPE) {
@@ -128,6 +124,7 @@ public class KeyInput extends KeyAdapter {
 		}		
 					
 		}
+
 	
 	// movement method of the character movement 
 	public void moveCoop(KeyEvent e) {
@@ -239,6 +236,15 @@ public class KeyInput extends KeyAdapter {
 					if (!keyDown[1] && !keyDown[3])
 						playerObject.setVelX(0);
 				}
+
+			}
+		}
+	}
+	}
+			/* if (game.gameState == STATE.Attack) {
+				if (playerObject.getId() == ID.Player) {
+					keyReleased(KeyEvent e)
+
 
 			// changed the function of key inputs for coop
 			// here the velocity is set independently of the playerObject used/

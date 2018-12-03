@@ -52,7 +52,7 @@ public class Player extends GameObject {
 		this.serverHUD = serverHUD;
 		bulletX = 0;
 		bulletY = 0;
-		shooting = false;
+		shooting = true;
 		timer = 60;
 //********* CHANGE HERE FOR NEW CHAR 
 		img = getImage("images/TrumpImage.png");

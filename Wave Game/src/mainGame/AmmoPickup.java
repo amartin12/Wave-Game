@@ -17,7 +17,7 @@ public class AmmoPickup extends Pickup{
 	private Handler handler;
 
 	public AmmoPickup(ID id, Handler handler) {
-		super((Game.WIDTH - 70)*Math.random(), (Game.HEIGHT - 120)*Math.random(), id);
+		super((1100 - 70)*Math.random(), (700 - 120)*Math.random(), id);
 		this.handler = handler;
 		velX = 0;
 		velY = 0;
