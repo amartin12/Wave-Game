@@ -93,7 +93,6 @@ public class Game extends Canvas implements Runnable {
 		upgrades = new Upgrades(this, this.handler, this.hud, this.upgradeScreen, this.player, this.spawner, this.spawner2,
 				this.spawner3, this.spawner4, this.attackHUD, this.attackSpawn);
 		gameOver = new GameOver(this, this.handler, this.hud, this.hud2, this.attackHUD, this.serverHUD);
-		pauseMenu = new PauseMenu();
 		victory = new Victory(this, this.handler, this.hud, this.hud2, this.attackHUD);
 		mouseListener = new MouseListener(this, this.handler, this.hud, this.hud2, this.serverHUD, this.attackHUD, this.spawner, this.spawner2, this.spawner3, this.spawner4, this.attackSpawn,
 				this.upgradeScreen, this.player, this.player2, this.server, this.upgrades);
@@ -244,8 +243,10 @@ public class Game extends Canvas implements Runnable {
 			return;
 		}
 		Graphics g = bs.getDrawGraphics();
-		///////// Draw things bellow this/////////////
-		g.setColor(Color.black);
+		// Draw things below this
+		// Determines background color
+		Color color1 = new Color(0, 133, 180);
+		g.setColor(color1);
 		g.fillRect(0, 0, 1100, 700);
 
 		handler.render(g); // ALWAYS RENDER HANDLER, NO MATTER IF MENU OR GAME

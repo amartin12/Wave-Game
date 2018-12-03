@@ -1,8 +1,13 @@
 package mainGame;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.net.URL;
 import java.util.ArrayList;
+
+import javax.swing.ImageIcon;
 
 import mainGame.Game.STATE;
 
@@ -31,6 +36,7 @@ public class KeyInput extends KeyAdapter {
 	private String ability = "";
 	private PlayerBullets shooting;
 	private GameObject playerObject;
+	public Image image;
 
 	// uses current handler created in Game as parameter
 	public KeyInput(Handler handler, Game game, HUD hud, AttackHUD attackHUD, Player player, Player player2,
@@ -116,9 +122,11 @@ public class KeyInput extends KeyAdapter {
 			if (game.gameState == STATE.Game || game.gameState == STATE.Attack || game.gameState == STATE.Defense) {
 				if(game.isPaused() == true){
 					game.unPause();
+			
 				}
 					else {
 						game.pause();
+						PauseMenu pauseMenu = new PauseMenu(handler); 
 					}
 				}
 			}

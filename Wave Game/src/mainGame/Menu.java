@@ -165,11 +165,11 @@ public class Menu {
 			Font font3 = new Font("Roboto", 1, 90);
 			
 			g.setFont(font3);
-			g.setColor(Color.magenta);
+			g.setColor(Color.black);
 			g.drawString("HOW TO PLAY", 260, 120);
 
 			g.setFont(font);
-			g.setColor(Color.magenta);
+			g.setColor(Color.black);
 			g.drawString("Instructions:", 40, 190);// + " \n"
 			
 			g.setFont((font));
@@ -198,18 +198,18 @@ public class Menu {
 			g.setFont(font2);
 			g.setColor(Color.white);
 			g.drawString("Player 1 moves by WASD keys and Player 2 moves by", 153, 375);
-			g.drawString("arrow keys.The first player to collect 20 votes wins.", 153, 395);
+			g.drawString("arrow keys.The first player to collect 20 treats wins.", 153, 395);
 			
 			g.setFont(font2);
 			g.setColor(Color.cyan);
-			g.drawString("Server Defense:", 90, 450);
+			g.drawString("Coral Reef Defense:", 90, 450);
 			g.setFont(font2);
 			
 			g.setFont(font2);
 			g.setColor(Color.white);
-			g.drawString("Defend the server from incoming enemies. As", 211, 450);
-			g.drawString("you get closer to the enemies, they will be", 211, 470);
-			g.drawString("pulled away from the server.", 211, 490);
+			g.drawString("Defend the Coral Reef from incoming enemies!", 242, 450);
+			g.drawString("As you get closer to the enemies, they will be", 242, 470);
+			g.drawString("pulled away from the reef.", 242, 490);
 			
 			g.setFont(font2);
 			g.setColor(Color.cyan);
@@ -230,61 +230,52 @@ public class Menu {
 			g.drawString("The game contains the following pick ups:" , 560, 245);
 			
 			g.setFont((font2));
-			g.setColor(Color.magenta);
+			g.setColor(Color.black);
 			g.drawString("HELP PLAYER" , 560, 290);
 			
 			g.setFont(font2);
 			g.setColor(Color.cyan);
-			g.drawString("Putin:", 610, 320);
+			g.drawString("Seaweed:", 610, 320);
 			
 			g.setFont(font2);
 			g.setColor(Color.white);
-			g.drawString("Increases player’s health", 659, 320);
+			g.drawString("Increases player’s health", 688, 320);
 			
 			g.setFont(font2);
 			g.setColor(Color.cyan);
-			g.drawString("Twitter Symbol:", 610, 350);
+			g.drawString("Pearl:", 610, 350);
 			
 			g.setFont(font2);
 			g.setColor(Color.white);
-			g.drawString("Increases the player’s speed for the rest of that level", 725, 350);
+			g.drawString("Increases the player’s speed for the rest of that level", 665, 350);
 			
 			g.setFont(font2);
 			g.setColor(Color.cyan);
-			g.drawString("NRA Logo:", 610, 380);
+			g.drawString("Shell:", 610, 380);
 			
 			g.setFont(font2);
 			g.setColor(Color.white);
-			g.drawString("Gives the player an extra life", 691, 380);
-			
-			g.setFont(font2);
-			g.setColor(Color.cyan);
-			g.drawString("Hillary Emails:", 610, 410);
-			
-			g.setFont(font2);
-			g.setColor(Color.white);
-			g.drawString("Slows down the speed of the Hillary snakes in the", 716, 410);
-			g.drawString("Hillary boss", 715, 430);
+			g.drawString("Gives the player an extra life", 661, 380);
 			
 			g.setFont((font2));
-			g.setColor(Color.magenta);
-			g.drawString("HURT PLAYER", 560, 465);
+			g.setColor(Color.black);
+			g.drawString("HURT PLAYER", 560, 425);
 			
 			g.setFont(font2);
 			g.setColor(Color.cyan);
-			g.drawString("Eminem:", 610, 495);
+			g.drawString("Shark:", 610, 455);
 			
 			g.setFont(font2);
 			g.setColor(Color.white);
-			g.drawString("Decreases player’s health", 676, 495);
+			g.drawString("Decreases player’s health", 665, 455);
 			
 			g.setFont(font2);
 			g.setColor(Color.cyan);
-			g.drawString("NFL Logo:", 610, 525);
+			g.drawString("Stingray:", 610, 485);
 			
 			g.setFont(font2);
 			g.setColor(Color.white);
-			g.drawString("Decreases the player’s speed for the rest", 688, 525);
+			g.drawString("Decreases the player’s speed for the rest", 683, 485);
 		
 		
 			g.setColor(Color.white);
