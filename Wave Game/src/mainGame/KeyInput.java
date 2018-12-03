@@ -107,15 +107,11 @@ public class KeyInput extends KeyAdapter {
 		if (key == KeyEvent.VK_SPACE) {
 			upgrades.levelSkipAbility();
 		}
-		if (key == KeyEvent.VK_ENTER) {
-			ability = upgrades.getAbility();
-			if (ability.equals("clearScreen")) {
-				upgrades.clearScreenAbility();
-			} else if (ability.equals("levelSkip")) {
-				upgrades.levelSkipAbility();
-			} else if (ability.equals("freezeTime")) {
-				upgrades.freezeTimeAbility();
-			}
+		
+		if (key == KeyEvent.VK_ENTER && attackHUD.getAmmo() == 0) {
+			attackHUD.setAmmo(360);
+		}
+		
 		}
 		//adding pause menu
 		if (key == KeyEvent.VK_ESCAPE) {

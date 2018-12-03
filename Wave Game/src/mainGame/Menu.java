@@ -59,8 +59,8 @@ public class Menu {
 			
 		//List of new potential menu screens
 		//image = new ImageIcon("images/background1.jpg").getImage();
-	    image = new ImageIcon("images/background.gif").getImage();
-	    image2 = new ImageIcon("images/Wave_Game_menu.png").getImage();
+	    image = new ImageIcon("images/wave.gif").getImage();
+	    image2 = new ImageIcon("images/WaveGameMenu.png").getImage();
 	    //image = new ImageIcon("images/background2.gif").getImage();
 	    
 	    //removed fireworks
@@ -99,7 +99,8 @@ public class Menu {
 			Font font = new Font("Roboto", 1, 35);
 			Font font2 = new Font("Roboto", 1, 30);
 			Color color1 = new Color(255, 255, 225);
-			Color color2 = new Color(0, 255, 255);
+			Color color2 = new Color(0, 133, 180);
+			Color color3 = new Color(0, 173, 209);
 
 			g.setFont(font);
 			g.setColor(color2);
@@ -163,6 +164,7 @@ public class Menu {
 			Font font = new Font("Roboto", 1, 20);
 			Font font2 = new Font("Roboto", 1, 15);
 			Font font3 = new Font("Roboto", 1, 90);
+			
 			
 			g.setFont(font3);
 			g.setColor(Color.black);
@@ -259,8 +261,9 @@ public class Menu {
 			
 			g.setFont((font2));
 			g.setColor(Color.black);
+      
 			g.drawString("HURT PLAYER", 560, 425);
-			
+
 			g.setFont(font2);
 			g.setColor(Color.cyan);
 			g.drawString("Shark:", 610, 455);

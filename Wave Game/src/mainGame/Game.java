@@ -243,8 +243,7 @@ public class Game extends Canvas implements Runnable {
 			return;
 		}
 		Graphics g = bs.getDrawGraphics();
-		// Draw things below this
-		// Determines background color
+
 		Color color1 = new Color(0, 133, 180);
 		g.setColor(color1);
 		g.fillRect(0, 0, 1100, 700);

@@ -48,7 +48,7 @@ public class AttackSpawn {
 		if (levelNumber == 0) {
 			introTimer--;
 			if (tempCounter < 1) {// display intro game message ONE time
-				handler.addObject(new LevelText(Game.WIDTH / 2 - 675, Game.HEIGHT / 2 - 200,
+				handler.addObject(new LevelText(350, 375,
 						"Shoot and kill the enemies!", ID.Levels1to5Text));
 				tempCounter++;
 			}
